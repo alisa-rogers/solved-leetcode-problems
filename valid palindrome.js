@@ -15,7 +15,7 @@ var isPalindrome = function(s) {
      while (left < right) {
         let l = finalS[left];
         let r = finalS[right];
-        left++, right--
+        left++, right--;
         if (left >= right || l !== r) {
             return (l === r);
             break;
