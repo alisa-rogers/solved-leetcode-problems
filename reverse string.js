@@ -4,9 +4,9 @@
  */
 var reverseString = function(s) {
     
-     let left = 0, right = s.length - 1;   //0, 2
+     let left = 0, right = s.length - 1;
         
-         while (left < right) { // 0, 2 \\\ 1 1
+         while (left < right) {
         
             let temp = s[left];
             s[left] = s[right];
