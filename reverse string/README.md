@@ -18,7 +18,7 @@ so that the variables become swapped.
 We use the "while" loop to handle each pair of variables.
 
 ## Code explanation
-Firstly, we declare the variables:
+Firstly, we declare variables:
 ```javascript
  let left = 0, right = s.length - 1;  
 ```
