@@ -3,10 +3,10 @@
  * @return {boolean}
  */
 var isPalindrome = function(s) {
-    let newS = s.replace(/[.,\/#!$%\^&\*;:{}=\-_`?~() ]/g,"");
+    let newS = s.replace(/[.,\'/#!$%\^"&\*;@:{}=\-_`?~() ]/g,"");
     let finalS = newS.toLowerCase();
     
-    if (s.length === 0 || s.length === 1) {
+    if (finalS.length === 0 || finalS.length === 1) {
         return true;
     };
     
