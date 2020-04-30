@@ -1,4 +1,11 @@
-let arrayG = guess.split ("");
+/**
+ * @param {string} secret
+ * @param {string} guess
+ * @return {string}
+ */
+var getHint = function(secret, guess) {
+    let arrayS = secret.split ("");
+    let arrayG = guess.split ("");
     let bulls = 0;
     let cows = 0;
     let length = arrayS.length; 
