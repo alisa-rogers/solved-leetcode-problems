@@ -3,8 +3,7 @@
  * @return {number}
  */
 var lengthOfLastWord = function(s) {
-     let newS = s.replace(/[.,\'/#!$%\^"&\*;@:{}=\-_`?~()]/g,"");
-    let array = newS.split (" ");
+    let array = s.split (" ");
     let filtered = array.filter (function (e) {
         return e.length !== 0;
     });
