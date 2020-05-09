@@ -1,4 +1,5 @@
 //a version without function, just to get the main idea
+//output in all the cases: ""
 
 let arr = ["d", "d", "d"];
 if (arr.length === 0) {
