@@ -19,5 +19,9 @@ Solutions that pass all the tests:
 
 [Vaid Palindrome](https://github.com/alisa-rogers/solved-leetcode-problems/tree/master/valid%20palindrome) - checking if the string is a palindrome.
 
+[First Unique Character in a String](https://github.com/alisa-rogers/solved-leetcode problems/tree/master/first%20unique%20character%20in%20a%20string) - finding the first character that appears in a string only once.
+
+[Number of Segments](https://github.com/alisa-rogers/solved-leetcode-problems/tree/master/number%20of%20segments%20in%20a%20string) - counting the number of segments in a string.
+
 Other solutions are drafts; I continue to work on them.
 
