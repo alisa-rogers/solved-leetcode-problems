@@ -1,31 +1,26 @@
 # Bulls and Cows
 Task: [Bulls and Cows](https://leetcode.com/problems/bulls-and-cows/).
 We have two strings of equal length, that consist of numbers. Our task is to check how similar are they. 
-The answer string should look like "[number A]A[numberB]B", where
+The answer string should look like "[number of bulls]A[number of cows]B", where
 
-[number A] is a quantity of numbers that both the first and the second string includes 
-and that are located at the same position in the second string as they are in the first (bulls).
-
-[numberB] is a quantity of numbers that both the first and the second string includes 
-and that are located NOT at the same position in the second string as they are in the first (cows).
-
+Bulls are digits present in both strings in the same positions.  E.g. for strings “123” and “213”, the digit 3 is a bull.
+Cows are digits present in both strings, but in different positions. E.g. for strings “123” and “213”, the digits 1 and 2 are cows.
+Both strings may contain duplicate digits. For the strings "0123" and "3345", the answer will be "0A1B", because there is only one "3" in the first string.
 
 ## Algorithm of solving
 
-Let's find number A, and than find number B.
+Let's count the bulls, and then count cows.  
 
 First, we make both strings into arrays.
 
-To find number A we use a loop that will check for a correspondence between each pair of numbers at the arrays.
+To count the bulls we use a loop that will check for a correspondence between each pair of digits in the arrays. That loop checks if every digit in the second array is present in the first.
 
 To find number B we use a loop too. That loop checks if every number from the second array is present in the first. 
-If we have only one "7" in the first array and two "7"s in the second, we only consider one of these "7"s as a matching.
-In order to do that, each time we find the matching number we remove the appropriate number from the first string. 
+In order to do that, each time we find the matching digit, we remove the first occurrence of this digit from the first array.
 
-*The second loop increases the number B by 1 for all the numbers that both array include, no matter where they are located, 
-that's why we should also substract the first number from the second.
+Note that the second loop counts all the digits present in both arrays regardless of their positions, therefore it counts both cows and bulls. That's why we should subtract the number of bulls after the loop to get the number of cows.
 
-Finally, we make up the final string. The problem is solved.
+Then we make up the final string and the problem is solved.
 
 
 ## Code explanation
