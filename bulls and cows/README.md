@@ -27,41 +27,45 @@ Then we make up the final string and the problem is solved.
 
 Make strings into arrays:
 ```javascript
-    let arrayS = secret.split ("");
-    let arrayG = guess.split ("");
+    let secret = secretStr.split ("");
+    let guess = guessStr.split ("");
 ```
 
 Set the necessary variables and the limiting variable for both of the loops:
 ```javascript
     let bulls = 0;
     let cows = 0;
-    let length = arrayS.length; 
+    let length = secret.length; 
 ```
 
-The first loop to find a number A:
+The first loop to count the bulls:
 ```javascript
  for (let i = 0; i < length; i++) {
-        if (arrayS[i] === arrayG[i]) {
+        if (secret[i] === guess[i]) {
             bulls++;
-            cows--; //see the *paragraph
         };
+    }; 
 ```
-The second loop to find a number B:
+The second loop to count the cows:
 ```javascript
-for (let n = 0; n < length; n++) {
-            if (arrayS.includes (arrayG[n])) {
+    for (let n = 0; n < length; n++) {
+            if (secret.includes (guess[n])) {
                 cows++;
-                arrayS.splice (arrayS.indexOf(arrayG[n]), 1);
+                secret.splice (secret.indexOf(guess[n]), /* deleteCount= */ 1);
                 };
         };
 ```
-The final string:
+The second loop counts all the digits present in both arrays regardless of their positions, 
+therefore it counts both cows and bulls. That's why we should subtract the number of bulls after the loop 
+to get the number of cows.
 
 ```javascript
-let string = bulls + "A" + cows + "B";
-    return string;
+    cows -= bulls;
 ```
-
+Make the final string:
+```javascript
+return bulls + "A" + cows + "B";
+```
 ## Test
 ![Bulls and Cows test](https://github.com/alisa-rogers/solved-leetcode-problems/blob/master/bulls%20and%20cows/bulls%20and%20cows%20test.PNG)
 ## Input/output
