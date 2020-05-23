@@ -12,7 +12,6 @@ var getHint = function(secretStr, guessStr) {
     for (let i = 0; i < length; i++) {
         if (secret[i] === guess[i]) {
             bulls++;
-           // cows--;
         };
     }; 
         for (let n = 0; n < length; n++) {
