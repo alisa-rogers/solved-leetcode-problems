@@ -66,8 +66,8 @@ Make the final string:
 ```javascript
 return bulls + "A" + cows + "B";
 ```
-## Test
+## Full tests
 ![Bulls and Cows test](https://github.com/alisa-rogers/solved-leetcode-problems/blob/master/bulls%20and%20cows/bulls%20and%20cows%20test.PNG)
-## Input/output
+## Sample tests
 ![Bulls and Cows output 1](https://github.com/alisa-rogers/solved-leetcode-problems/blob/master/bulls%20and%20cows/bulls%20and%20cows%20output%201.PNG)
 ![Bulls and Cows output 2](https://github.com/alisa-rogers/solved-leetcode-problems/blob/master/bulls%20and%20cows/bulls%20and%20cows%20output%202.PNG)
