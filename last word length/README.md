@@ -40,3 +40,7 @@ else {
 ```
 The problem is solved.
 
+## Full tests
+![full tests](https://github.com/alisa-rogers/solved-leetcode-problems/blob/master/last%20word%20length/last%20word%20length%20test.PNG)
+## Sample tests
+![full tests](https://github.com/alisa-rogers/solved-leetcode-problems/blob/master/last%20word%20length/last%20word%20length%20output.PNG)
