@@ -33,7 +33,7 @@ Than we create the loop:
             right--;
          };
 ```
-## Test
+## Full tests
 ![Reverse String test](https://github.com/alisa-rogers/solved-leetcode-problems/blob/master/reverse%20string/reverse-string-test.PNG)
-## Input/output
+## Sample tests
 ![Reverse String output](https://github.com/alisa-rogers/solved-leetcode-problems/blob/master/reverse%20string/reverse-string-output.PNG)
