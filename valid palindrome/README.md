@@ -44,3 +44,9 @@ let left = 0, right = finalS.length - 1;
 };
 ```
 The problem is solved.
+
+## Full tests
+![full tests](https://github.com/alisa-rogers/solved-leetcode-problems/blob/master/valid%20palindrome/valid%20palindrome%20test.PNG)
+
+## Sample tests
+![sample tests1](https://github.com/alisa-rogers/solved-leetcode-problems/blob/master/valid%20palindrome/valid%20palindrome%20output.PNG)
