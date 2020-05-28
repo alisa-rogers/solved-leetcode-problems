@@ -8,8 +8,8 @@ var firstUniqChar = function(s) {
     };
     let result;
     for (let i = 0; i < s.length; i++) {
-        let sstring = s.substring (0, i) + s.substring (i+1);
-        if (sstring.includes(s[i]) === true) {
+        let substring = s.substring (0, i) + s.substring (i+1);
+        if (substring.includes(s[i]) === true) {
             result = -1;
         }
         else {
