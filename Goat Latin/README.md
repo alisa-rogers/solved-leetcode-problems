@@ -32,7 +32,9 @@ The words that begin with a vowel remain unchanged at this stage.
 2. Add "ma".
 3. Add one letter "a" to the first word, two letters "a" to the second, and so on.
 So, it's obvious, that first of all we should make the function see the difference between the words 
-that begin with vowel, and other that start with a consonant..
+that begin with vowel, and other that start with a consonant.
+
+If the word starts with a vowel, we add it to the array we've created earlier to continue the change at the next stage.
 ```javascript
 if (word.startsWith("a") || word.startsWith("A") 
          || word.startsWith("e") || word.startsWith("E")
@@ -44,16 +46,52 @@ if (word.startsWith("a") || word.startsWith("A")
          }
    else {
 ```
+In the rest of the words, we move the first letter to the end of the word and add it to this array too.
+
+To move the letter, we split the word into separate letters and shift the first letter. Then we join the array into the word again and add the shifted letter to the end.
 ```javascript
+ else {
+            let wordarr = word.split ("");
+            let first = wordarr.shift();
+            word = wordarr.join("");
+            word = word + first;
+            newarr.push(word);
+         };
+    };
 ```
+At the next stage, we add the syllable "ma" to each word. We will use a similar approach: create an array and add the changed words to it.
 ```javascript
+ let arrma = [];
+    for (let b = 0; b < newarr.length; b++) {
+        let maword = newarr[b] + "ma";
+        arrma.push(maword);
+    };
 ```
+The last stage, at which should add the letter "a" according to the number of word in the string.
+To do that, we create a loop that iterates through every single word. Inside it, we create another loop, that adds to the word the letter "a" for amount of times that equals to the word number in a string.
 ```javascript
+let arrmaa = [];
+    for (let c = 0; c < arrma.length; c++) {
+        let maaword = arrma[c];
+        let d = 0;
+        while (d < c + 1) { 
+        /*as the index of the first word equals 0 and 
+        the variable "d" equals "0" too, 
+        we must add 1 to "c" in this condition. */
+           maaword = maaword + "a"; 
+           d++;
+        };
+        arrmaa.push(maaword);
+    };
 ```
+
+Finally, we join the words together to form the final string. 
 ```javascript
+let strmaa = arrmaa.join(" ");
+return strmaa;
+};
 ```
-```javascript
-```
+The problem is solved.
 
 ## Full tests
 ![full tests](https://github.com/alisa-rogers/solved-leetcode-problems/blob/master/Goat%20Latin/full%20tests.png)
