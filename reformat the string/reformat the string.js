@@ -32,15 +32,12 @@ var reformat = function(s) {
        refarray.push (digits[p]);
        refarray.push (letters[p]);
     };
-    if (digits.length > letters.length) {
+    if (digits.length > letters.length || digits.length === letters.length) {
         
         return (refarray.join(""));
     }
     else if (letters.length > digits.length){
         refarray.unshift (letters[letters.length - 1]);
-        return (refarray.join(""));
-    }
-    else {
         return (refarray.join(""));
     };
 };
