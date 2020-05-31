@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 var repeatedSubstringPattern = function(s) {
-    if (s.length === 1) {
+    if (s.length === 1 || s.length === 0) {
     return false;
     };
     let length = s.length/2;
