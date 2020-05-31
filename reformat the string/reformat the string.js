@@ -4,10 +4,10 @@
  */
 var reformat = function(s) {
     let array = s.split ("");
-    let i = 0;
     let refarray = [];
     let letters = [];
     let digits = [];
+    let i = 0;
     while (i < array.length) {
         if (array[i] === "0" || array[i] === "1" 
             || array[i] === "2" || array[i] === "3" 
