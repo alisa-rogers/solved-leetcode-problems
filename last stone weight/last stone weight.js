@@ -4,7 +4,7 @@
  */
 var lastStoneWeight = function(stones) {
     stones.sort(function(a, b){return b-a});
-    while (stones.length > 1)
+    while (stones.length > 1) {
     if (stones[0] === stones[1]) {
         stones.splice (0, 2);
     }
@@ -18,6 +18,7 @@ var lastStoneWeight = function(stones) {
         stones.splice (0, 1);
         stones.sort(function(a, b){return b-a});
     };
+};
     if (stones.length === 0) {
         return 0;
 }
